@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'NetflixSansBold';
+    src: url('fonts/NetflixSans-Bold.woff2') format('woff2'),
+        url('fonts/NetflixSans-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'NetflixSansLight';
+    src: url('fonts/NetflixSans-Light.woff2') format('woff2'),
+        url('fonts/NetflixSans-Light.otf') format('opentype');
+    font-weight: 300;
+    /* Light */
+}
+
+@font-face {
+    font-family: 'NetflixSansMedium';
+    src: url('fonts/NetflixSans-Medium.woff2') format('woff2');
+    font-weight: 500;
+    /* Medium */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", 'Poppins', Ubuntu, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("assets/images/bgglobal.jpg");
+    background-position: center center;
+    /*center the image*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: max(100vw, 1200px); */
+    /*so that image in bg resizes with responsive web*/
+    height: 85vh;
+    /* height: 644px; */
+    position: relative;
+}
+
+.main .box {
+    background-color: black;
+    height: 85vh;
+    /* height: 70vh; */
+    width: 100%;
+    opacity: 0.69;
+    /* background: radial-gradient(circle,
+            rgba(0, 0, 0, 0.6) 50%, 
+            rgba(0, 0, 0, 0.8) 80%,
+            rgba(0, 0, 0, 1) 100%); */
+    position: absolute;
+    /*adjusts top 0..use abs here and relative above*/
+    top: 0;
+}
+
+/* Lighter in the center */
+/* Darker towards edges */
+/* Fully opaque at borders */
+
+nav {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+    max-width: 75vw;
+    height: 100px;
+}
+
+nav img {
+    width: 145px;
+    color: rgb(204, 5, 5);
+    position: relative;
+    /*remember to use z-index with pos relative..else it wont work*/
+    z-index: 10;
+    margin-left: -16px;
+    /* width: calc(100% + 16px); */
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.nav-btn {
+    display: flex;
+    gap: 10px;
+}
+
+/* hero text  */
+.hero {
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+    height: calc(100% - 100px);
+    /*so that no paddding error and remove nav height */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    /* padding: 0 5%; */
+    position: relative;
+    z-index: 10;
+    gap: 23px;
+    /*or use line-height*/
+    text-align: center;
+    padding: 0 25px;
+
+}
+
+/* .hero> :first-child{  use this either below...> indicates immediate first child
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px ;
+    line-height: 70px;
+} */
+.hero .child1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.hero .child21 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: normal;
+    padding: 2px 0px 7px 0px;
+}
+
+.hero .child22 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+}
+
+/* tip ..use 1 media query for all..here i have just placed for good understanding  */
+@media screen and (max-width: 700px) {
+    .hero .child1 {
+        font-size: 35px;
+        margin-top: 2px;  
+    }
+    .hero .child21 {
+        font-size: 18px;
+    }
+    .hero .child22 {
+        font-size: 16px;
+    }
+    
+}
+
+.seperation {
+    height: 5px;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+    position: relative;
+    z-index: 30;
+}
+
+
+/* buttns  */
+.btn {
+    padding: 3px 8px;
+    font-weight: bold;
+    background-color: white;
+}
+
+
+.btn-lang {
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 2px;
+    padding: 4px 15px;
+    font-size: 13px;
+    font-weight: 340;
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    margin-left: 10px;
+}
+
+.btn-lang:focus {
+    /*if you give space lang :hover..it applies to child*/
+    border: 1.5px solid rgba(255, 255, 255, 0.947);
+}
+
+.btn-red-sm {
+    /* transition: inherit; */
+    cursor: pointer;
+    border-style: solid;
+    border-width: 0.0625rem;
+    border-radius: calc(0.25rem - 0.0625rem);
+    border-color: rgba(0, 0, 0, 0);
+    color: #fdfcf8;
+    background-color: #ef0913;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: -10px;
+
+}
+@media screen and (max-width: 700px) {
+    .hero-btns {
+        flex-direction: column;
+    }
+    
+}
+
+.main input {
+    background-color: rgba(23, 23, 23, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    padding: 15px 14px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    width: 300px;
+    transition: all 0.05s ease;
+}
+
+.main input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+.main input:focus {
+    border: 2px solid rgba(255, 255, 255, 0.947);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.btn.btn-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btn-arrow {
+    height: 10px;
+}
+
+#down {
+    padding: 0px 0px 0px 20px;
+    height: 12px;
+    width: 12px;
+}
+
+.btn.btn-red:hover {
+    background-color: #c21119;
+}
+
+
+/* .seperation {
+    -webkit-text-size-adjust: 100%;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    color: white;
+    box-sizing: border-box;
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background: radial-gradient(50% 500% at 50% -420%,
+            rgba(64, 97, 231, 0.4) 80%,
+            rgba(0, 0, 0, 0.1) 100%), black;
+    background-clip: padding-box;
+    width: 130%;
+    left: -15%;
+
+}
+.seperation::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin-top: -.25rem;
+    border-radius: inherit;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgb(224 193 207), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+
+} */
+.dropdown {
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 2px 15px;
+    font-size: 15px;
+    font-weight: 450;
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    margin-left: 10px;
+    position: relative;
+    z-index: 100;
+}
+
+.dropdown:focus {
+    border: 1.5px solid rgba(255, 255, 255, 0.947);
+    /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);  */
+}
+
+.dropdown-container::after {
+    content: "▼";
+}
+
+.dropdown option {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    text-transform: capitalize;
+}
+
+
+
+/* section  */
+.firstBox {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+}
+@media screen and (max-width: 1300px) {
+    .firstBox {
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    
+}
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    position: relative;
+    z-index: 10;
+    width: 455px;
+    /*harry 555px*/
+    /* width: 40vw; */
+    /* set z inedx so that the remove appears over video..tvbox  */
+
+}
+
+.secImg video {
+    position: absolute;
+    top: 51px;
+    left: 0;
+    width: 400px;
+    /*harry 555px*/
+}
+
+/* leftside text  */
+section.firstBox>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+    flex-wrap: wrap;
+}
+
+section.firstBox>div :first-child {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+section.firstBox>div :nth-child(2) {
+    font-size: 24px;
+}
+
+.seperationSec {
+    height: 5px;
+    background: rgba(185, 199, 241, 0.187);
+    position: relative;
+    z-index: 30;
+}
+
+
+/* faq  */
+.faq {
+    background-color: black;
+    color: white;
+}
+
+.wrapper {
+    width: 80vw;
+    margin: auto;
+}
+
+.wrapper h2 {
+    margin: 40px 0px 15px 2px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.faqbox img {
+    height: 25px;
+    /* if want to change from default black to white  */
+    /* filter: invert(1); */
+}
+
+.faqbox {
+    text-align: center;
+    display: flex;
+    background-color: #2d2d2d;
+    padding: 25px;
+    color: white;
+    max-width: 80vw;
+    height: 78px;
+    box-sizing: border-box;
+    /* margin: auto; */
+    justify-content: space-between;
+    font-size: 23px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 0 rgba(209, 208, 208, 0);
+}
+
+.faqbox:hover {
+    background-color: #414141;
+    transition: all 0.3s ease-out 0s;
+    /* box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);  */
+    /* Add brightness */
+
+}
+
+/* get mail  */
+.getMail {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.getMail .gm-content {
+    display: inline-block;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+.getMail .gm {}
+
+.getMail input {
+    background-color:#0f0f0f;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    padding: 15px 14px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    width: 35vw;
+    text-align: left;
+    transition: all 0.05s ease;
+}
+
+.getMail input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    font-family: "Netflix Sans", "Helvetica Neue", "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+.getMail input:focus {
+    border: 2px solid rgba(255, 255, 255, 0.947);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+/* footer  */
+footer {
+    color: #fdfcf8b4;
+    max-width: 80vw;
+    margin: auto;
+    padding: 34px;
+}
+
+footer span {
+    display: inline-block;
+    margin: 35px 0px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+    width: 80vw;
+    margin: auto;
+}
+@media screen and (max-width: 960px) {
+    .footer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media screen and (max-width: 576px) {
+    .footer {
+        grid-template-columns: 1fr ;
+    }
+    
+}
+
+.footer a {
+    text-decoration: underline;
+    color: #fdfcf8b4;
+    font-size: 14px;
+}
+
+.footer-item {
+    box-sizing: border-box;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-lang{
+    padding: 40px 0px 0px 0px;
+}
