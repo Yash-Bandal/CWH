@@ -42,7 +42,7 @@ body {
     /* background-size: max(100vw, 1200px); */
     /*so that image in bg resizes with responsive web*/
     height: 85vh;
-    /* height: 644px; */
+/*     height: 644px; */
     position: relative;
 }
 
