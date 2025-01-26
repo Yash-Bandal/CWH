@@ -36,6 +36,8 @@
     <div class="box">Hey I am a box</div>
 </div> -->
     <!-- <button id="btn">Change Content</button> -->
+        
+     <button id="btn">BuTton</button>
 
     <h1>Mouse Events Example</h1>
 
@@ -140,3 +142,20 @@ document.getElementById("contextmenuButton").addEventListener("contextmenu", (ev
   event.preventDefault(); // Prevents the default context menu from showing
   output.textContent = "You right-clicked on the button!";
 });
+
+//======================================used many times ======================================
+//Any Keyboard Key
+// for button 
+button.addEventListener("keydown", (e)=>{
+  console.log(e, e.key, e.keyCode)
+})
+
+//for entire doc/page...if you press M..it records M
+document.addEventListener("keydown", (e)=>{
+  console.log(e, e.key, e.keyCode)
+})
+/*
+op: 
+ 'Shift' 16
+MouseEvent.js:88 KeyboardEvent {isTrusted: true, key: 'M', code: 'KeyM', location: 0, ctrlKey: false, …} 'M' 77
+ */
