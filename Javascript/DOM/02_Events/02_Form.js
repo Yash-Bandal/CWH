@@ -69,7 +69,7 @@
 //==============================  Form.js ==================================
 const output = document.getElementById("output");
 const form = document.getElementById("myForm");
-const textInput = document.getElementById("textInput");
+const textInput = document.getElementById("textInput"); //points input of form
 const selectBox = document.getElementById("selectBox");
 const textarea = document.getElementById("textarea");
 
