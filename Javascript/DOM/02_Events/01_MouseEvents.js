@@ -28,6 +28,13 @@
             font-size: 18px;
             color: #333;
         }
+        #dabba {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      margin-top: 20px;
+      border: 2px solid #333;
+    }
     </style>
 </head>
 
@@ -35,9 +42,7 @@
     <!-- <div class="container">
     <div class="box">Hey I am a box</div>
 </div> -->
-    <!-- <button id="btn">Change Content</button> -->
-        
-     <button id="btn">BuTton</button>
+    <button id="btn">BuTton</button>
 
     <h1>Mouse Events Example</h1>
 
@@ -52,8 +57,14 @@
 
     <p id="output">Interact with the buttons to see the events in action.</p>
 
+    <h1>Remove Event Listener Example</h1>
+    <button id="addEvent">Add Mouseover Event</button>
+    <button id="removeEvent">Remove Mouseover Event</button>
+    <div id="dabba"></div>
+  
+
     <!-- <script src="script.js"></script> -->
-    <script src="yash.js"></script>
+    <script src="MouseEvent.js"></script>
 </body>
 
 </html>
@@ -160,3 +171,28 @@ op:
 MouseEvent.js:88 KeyboardEvent {isTrusted: true, key: 'M', code: 'KeyM', location: 0, ctrlKey: false, …} 'M' 77
 Like while making games.Mario..Arrowkey up pressed...Jump event
  */
+
+
+const box = document.getElementById("dabba");
+const addEventButton = document.getElementById("addEvent");
+const removeEventButton = document.getElementById("removeEvent");
+
+// Function to handle the mouseover event
+function handleMouseOver() {
+  box.style.backgroundColor = "yellow";
+  box.textContent = "Mouse is over the box!";
+}
+
+
+// Adding the event listener to the box when "Add Event" button is clicked
+addEventButton.addEventListener("click", () => {
+  box.addEventListener("mouseover", handleMouseOver);
+  alert("Mouseover event added!");
+});
+
+// Removing the event listener from the box when "Remove Event" button is clicked
+removeEventButton.addEventListener("click", () => {
+  box.removeEventListener("mouseover", handleMouseOver);
+  alert("Mouseover event removed!");
+});
+
