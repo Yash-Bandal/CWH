@@ -158,4 +158,5 @@ document.addEventListener("keydown", (e)=>{
 op: 
  'Shift' 16
 MouseEvent.js:88 KeyboardEvent {isTrusted: true, key: 'M', code: 'KeyM', location: 0, ctrlKey: false, …} 'M' 77
+Like while making games.Mario..Arrowkey up pressed...Jump event
  */
