@@ -138,8 +138,8 @@ document.getElementById("mousemoveButton").addEventListener("mousemove", () => {
 // Triggered when the right mouse button is clicked (context menu) on the "Right Click" button.
 // The default context menu is prevented.
 // Output: "You right-clicked on the button!"
-document.getElementById("contextmenuButton").addEventListener("contextmenu", (event) => {
-  event.preventDefault(); // Prevents the default context menu from showing
+document.getElementById("contextmenuButton").addEventListener("contextmenu", (event) => {  //'inner "event" ' is the event object that is fired after given event takes place..like right click here
+  event.preventDefault(); // Prevents the default context menu from showing                  //you can perfrom operations on the even specifically
   output.textContent = "You right-clicked on the button!";
 });
 
