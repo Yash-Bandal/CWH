@@ -1,3 +1,5 @@
+//(a,b) = (0,255) rgb vals...formula a+ r * ( b-a )
+
 //Note harry said html collection does not have foreahch method
 console.log("yash.js initializing");
 // let boxes = document.getElementsByClassName("box");  //or
