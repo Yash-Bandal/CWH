@@ -19,7 +19,7 @@ Array.from(boxes).forEach(e=>{
 
 })
 
-
+//Formula
 /*
 
 we know that math.random() gives a random num btw 0 and 1 only
