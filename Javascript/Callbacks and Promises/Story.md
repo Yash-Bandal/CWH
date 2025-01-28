@@ -1,4 +1,4 @@
-## Callbacks L
+## Callbacks
 Imagine you’re at a café, and you order a coffee. The barista tells you, “I’ll make your coffee, and once it’s ready, I’ll call you.”
 Now, you wait, but you can do other things while waiting, like checking your phone. When the coffee is ready, the barista calls you (like a callback -Notifiaction) 
 to let you know it’s time to pick it up.
@@ -12,6 +12,6 @@ In programming, a promise is an object that represents the eventual completion (
 
 There are three states for a promise:
 
-Pending – The promise is still waiting to be fulfilled.
-Resolved (or fulfilled) – The operation was successful.
-Rejected – Something went wrong.
+-- Pending – The promise is still waiting to be fulfilled.
+-- Resolved (or fulfilled) – The operation was successful.
+-- Rejected – Something went wrong.
