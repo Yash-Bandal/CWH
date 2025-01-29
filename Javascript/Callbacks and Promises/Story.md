@@ -12,6 +12,6 @@ In programming, a promise is an object that represents the eventual completion (
 
 There are three states for a promise:
 
--- Pending – The promise is still waiting to be fulfilled. <br>
--- Resolved (or fulfilled) – The operation was successful. <br>
--- Rejected – Something went wrong.
+- Pending – The promise is still waiting to be fulfilled. <br>
+- Resolved (or fulfilled) – The operation was successful. <br>
+- Rejected – Something went wrong.
