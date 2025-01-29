@@ -144,5 +144,5 @@ Promise.any([task1, task2])
 
 ```
 
-.race : When you care about the first promise to settle, no matter if it's fulfilled or rejected.
+.race : When you care about the first promise to settle, no matter if it's fulfilled or rejected. <br>
 .any  : When you care only about the first successful (fulfilled) promise
