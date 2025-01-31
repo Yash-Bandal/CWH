@@ -13,7 +13,7 @@ console.log("Hello World" // Missing closing parenthesis
 ```
 **Fix:**
 ```javascript
-console.log("Hello World");
+console.log("Hello World"); // Output: Hello World
 ```
 
 ### **b) Reference Error (`ReferenceError`)**
@@ -24,7 +24,7 @@ console.log(myVariable); // ReferenceError: myVariable is not defined
 **Fix:**
 ```javascript
 let myVariable = 10;
-console.log(myVariable);
+console.log(myVariable); // Output: 10
 ```
 
 ### **c) Type Error (`TypeError`)**
@@ -68,19 +68,19 @@ console.log(decodeURI('%20')); // Output: (space)
 try {
   let data = myUndefinedVar; // ReferenceError
 } catch (error) {
-  console.log("An error occurred:", error.message);
+  console.log("An error occurred:", error.message); // Output: An error occurred: myUndefinedVar is not defined
 }
 ```
 
 ### **b) `try...catch...finally` Block**
 ```javascript
 try {
-  console.log("Trying...");
+  console.log("Trying..."); // Output: Trying...
   throw new Error("Something went wrong!");
 } catch (error) {
-  console.log("Error caught:", error.message);
+  console.log("Error caught:", error.message); // Output: Error caught: Something went wrong!
 } finally {
-  console.log("Finally block executed.");
+  console.log("Finally block executed."); // Output: Finally block executed.
 }
 ```
 
@@ -98,7 +98,7 @@ function checkAge(age) {
 try {
   console.log(checkAge(16));
 } catch (error) {
-  console.log("Error:", error.message);
+  console.log("Error:", error.message); // Output: Error: You must be 18 or older.
 }
 ```
 
@@ -109,9 +109,9 @@ try {
 try {
   let num = num.toUpperCase(); // TypeError
 } catch (error) {
-  console.log("Error Name:", error.name);
-  console.log("Error Message:", error.message);
-  console.log("Stack Trace:", error.stack);
+  console.log("Error Name:", error.name); // Output: Error Name: TypeError
+  console.log("Error Message:", error.message); // Output: Error Message: Cannot read properties of undefined (reading 'toUpperCase')
+  console.log("Stack Trace:", error.stack); // Output: Stack Trace: (stack trace info)
 }
 ```
 
@@ -127,7 +127,7 @@ async function fetchData() {
     let data = await response.json();
     console.log(data);
   } catch (error) {
-    console.log("Failed to fetch data:", error.message);
+    console.log("Failed to fetch data:", error.message); // Output: Failed to fetch data: Failed to fetch
   }
 }
 
@@ -138,7 +138,7 @@ fetchData();
 ```javascript
 fetch('https://invalid-url.com')
   .then(response => response.json())
-  .catch(error => console.log("Error:", error.message));
+  .catch(error => console.log("Error:", error.message)); // Output: Error: Failed to fetch
 ```
 
 ---
@@ -148,14 +148,14 @@ fetch('https://invalid-url.com')
 ### **a) `window.onerror` (For Browsers)**
 ```javascript
 window.onerror = function(message, source, lineno, colno, error) {
-  console.log("Global Error:", message);
+  console.log("Global Error:", message); // Output: Global Error: (error message)
 };
 ```
 
 ### **b) `process.on('uncaughtException')` (For Node.js)**
 ```javascript
 process.on('uncaughtException', (error) => {
-  console.log("Unhandled Exception:", error.message);
+  console.log("Unhandled Exception:", error.message); // Output: Unhandled Exception: (error message)
 });
 ```
 
@@ -185,3 +185,4 @@ process.on('uncaughtException', (error) => {
 
 ---
 
+Now you have a structured guide on **JavaScript Error Handling**! 🚀 Feel free to contribute or suggest improvements. Happy coding! 🎯
