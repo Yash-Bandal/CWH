@@ -184,5 +184,4 @@ process.on('uncaughtException', (error) => {
 | `process.on('uncaughtException')` | Catches unhandled exceptions in Node.js |
 
 ---
-
-Now you have a structured guide on **JavaScript Error Handling**! 🚀 Feel free to contribute or suggest improvements. Happy coding! 🎯
+Bamli Bumli Baam Productions Limited.pct.ltd 
