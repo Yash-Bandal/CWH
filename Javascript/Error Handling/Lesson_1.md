@@ -1,6 +1,10 @@
 # JavaScript Error Handling Guide
 
 Error handling in JavaScript is essential for writing robust and fault-tolerant applications. This guide covers different error types, handling mechanisms, and best practices.
+Use when : 
+an error terminates code and program halts..down program not proceed..thus use try catch
+instead of giving program error..give me error in console
+
 
 ---
 
