@@ -1,123 +1,128 @@
-# 🏗️ Lesson 2: Prototypes and Inheritance in JavaScript
+# 🎯 Lesson 2: Objects & Object Literals
 
 ## 📌 Introduction
-In JavaScript, **prototypes** and **inheritance** enable objects to share properties and methods efficiently. This is crucial in web development to create reusable components and manage code effectively.
+In JavaScript, objects are **key-value pairs** that store related data and functionality together. They are the **foundation of OOP** and are widely used in full-stack development for handling structured data.
 
-We will follow a **real-world example** of an **E-commerce platform** where different types of users (Admin, Seller, Customer) inherit properties and behaviors from a base `User` object.
+We will continue our **E-Commerce Store Example** from Lesson 1 to understand objects in depth.
 
 ---
 
-## 🏛️ 1. Understanding Prototypes
-In JavaScript, every object has an internal link to another object called its **prototype**. This allows objects to inherit properties and methods.
+## 🏪 Defining an Object (Object Literals)
+An **object literal** is the simplest way to create an object in JavaScript.
 
 ```javascript
-// Base User Constructor
-function User(name, role) {
-  this.name = name;
-  this.role = role;
-}
+const product = {
+  name: "Wireless Mouse",
+  price: 1200,
+  category: "Electronics",
+  inStock: true,
+};
+```
 
-// Adding a method using prototype
-User.prototype.getDetails = function() {
-  return `${this.name} is a ${this.role}`;
+Each property (`name`, `price`, `category`, `inStock`) consists of a **key-value pair**.
+
+---
+
+## 🔹 Accessing Object Properties
+You can access properties using **dot notation** or **bracket notation**.
+
+```javascript
+console.log(product.name);      // "Wireless Mouse"
+console.log(product["price"]);  // 1200
+```
+
+🔹 **Use dot notation** when property names are known.
+🔹 **Use bracket notation** when property names are dynamic or contain special characters.
+
+Example of dynamic access:
+
+```javascript
+let key = "category";
+console.log(product[key]); // "Electronics"
+```
+
+---
+
+## 🔹 Adding, Updating, and Deleting Properties
+You can **modify objects** by adding, updating, or deleting properties.
+
+```javascript
+// Adding a new property
+product.brand = "Logitech";
+
+// Updating an existing property
+product.price = 999;
+
+// Deleting a property
+delete product.inStock;
+```
+
+🔹 Useful when handling **real-time data updates** in **e-commerce platforms**.
+
+---
+
+## 🔹 Nested Objects
+Objects can have **nested objects** for better structuring.
+
+```javascript
+const product = {
+  name: "Wireless Mouse",
+  price: 1200,
+  specifications: {
+    weight: "150g",
+    battery: "AA",
+  },
 };
 
-const user1 = new User("Alice", "Customer");
-console.log(user1.getDetails()); // Alice is a Customer
+console.log(product.specifications.battery); // "AA"
 ```
 
-### 🔍 How It Works
-1. `User` is a constructor function that initializes `name` and `role`.
-2. `User.prototype.getDetails` is shared across all instances.
-3. `user1` can access `getDetails` even though it’s not directly defined in `User`.
+💡 Used in **API responses** where complex data is stored hierarchically.
 
 ---
 
-## 🔗 2. Prototype Chain
-If a property or method isn’t found on an object, JavaScript looks up the prototype chain.
+## 🔹 Looping Over Object Properties
+Use the `for...in` loop to iterate over object properties.
 
 ```javascript
-console.log(user1.toString());
-// Output: [object Object] (inherited from Object.prototype)
-```
-
-### ✅ Practical Use in Web Development
-- Reduces memory usage by sharing methods.
-- Useful for defining common behaviors across components (e.g., UI elements, API models).
-
----
-
-## 🏆 3. Inheritance with Constructor Functions
-Subclasses can inherit properties from a parent class using **call() and prototypes**.
-
-```javascript
-function Admin(name, permissions) {
-  User.call(this, name, "Admin"); // Call User constructor
-  this.permissions = permissions;
+for (let key in product) {
+  console.log(`${key}: ${product[key]}`);
 }
+```
 
-Admin.prototype = Object.create(User.prototype); // Inherit methods
-Admin.prototype.constructor = Admin;
+🔹 Useful for **displaying product details dynamically** in a frontend UI.
 
-Admin.prototype.getPermissions = function() {
-  return `${this.name} has ${this.permissions} access.`;
+---
+
+## 🔹 Object Methods (Functions Inside Objects)
+Objects can have **methods** to perform actions.
+
+```javascript
+const product = {
+  name: "Wireless Mouse",
+  price: 1200,
+  displayInfo: function() {
+    return `${this.name} costs Rs. ${this.price}`;
+  }
 };
 
-const admin1 = new Admin("Bob", "full");
-console.log(admin1.getDetails()); // Bob is a Admin
-console.log(admin1.getPermissions()); // Bob has full access.
+console.log(product.displayInfo()); // "Wireless Mouse costs Rs. 1200"
 ```
 
-### ✅ Why Use This?
-- Allows extending features (e.g., Admins can manage users while Customers can only purchase).
-- Useful in **multi-role applications** like CMS, dashboards, and admin panels.
+🔹 Used for **business logic**, such as calculating discounts, tax, etc.
 
 ---
 
-## 📜 4. Modern Inheritance with ES6 Classes
-ES6 introduced `class` syntax, making inheritance cleaner.
-
-```javascript
-class Seller extends User {
-  constructor(name, shopName) {
-    super(name, "Seller");
-    this.shopName = shopName;
-  }
-
-  getShopDetails() {
-    return `${this.name} owns ${this.shopName}.`;
-  }
-}
-
-const seller1 = new Seller("Charlie", "TechStore");
-console.log(seller1.getDetails()); // Charlie is a Seller
-console.log(seller1.getShopDetails()); // Charlie owns TechStore.
-```
-
-### ✅ Benefits of ES6 Classes
-- **More readable syntax** compared to prototype-based inheritance.
-- **Encapsulation**: Methods are automatically added to the prototype.
-- **Super keyword** calls the parent constructor, simplifying inheritance.
-
----
-
-## 🌍 5. Real-World Applications in Web Development
-### 🔹 Frontend:
-- **Component-based frameworks (React, Vue)**: Reusable UI components inherit base properties.
-- **Form validation classes**: Shared validation logic across forms.
-
-### 🔹 Backend:
-- **Express.js middleware**: Base `RequestHandler` class extended by custom handlers.
-- **Database models**: ORM models like Mongoose schemas use inheritance for common behaviors.
+## 🛠 Applications in Full-Stack Development
+✅ **Frontend**: Handling UI data (React/Next.js states, props)
+✅ **Backend**: API responses (Express.js, Node.js)
+✅ **Database Operations**: Storing structured data (MongoDB, PostgreSQL)
+✅ **Authentication**: User sessions & tokens (JWT, OAuth)
 
 ---
 
 ## 🎯 Conclusion
-- **Prototypes** enable memory-efficient method sharing.
-- **Prototype chain** allows method lookup through parent objects.
-- **Constructor inheritance** enables object extensions.
-- **ES6 Classes** provide a cleaner, structured way to implement OOP principles.
-- **Used widely in frameworks and backend systems**.
+Objects are **fundamental in JavaScript** and essential for structuring data in **full-stack applications**. Mastering them will make **handling APIs, databases, and UI components much easier**.
 
-🚀 Next, we will dive into **Encapsulation and Closures in JavaScript!** 🎉
+🚀 Next: [Lesson 3 - The `this` Keyword](./3_This_Keyword.md)
 
