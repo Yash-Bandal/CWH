@@ -93,5 +93,24 @@ Unlike instance methods, **static methods don't require creating an object**. Th
 
 ---
 
+# 📌 JavaScript Static Properties vs C++ Static Variables
+In JavaScript, static properties and methods in classes do not persist in memory the same way as static variables in C++. However, they do share memory across all instances of the class because they belong to the class itself, not to individual objects.
+## 🔹 Comparison with C++ Static Variables
+
+| Feature           | C++ `static` Variables                          | JavaScript `static` Properties               |
+|------------------|---------------------------------------------|----------------------------------|
+| **Memory Allocation** | Allocated once, persists across function calls | Exists once on the class, shared by instances |
+| **Access**       | Shared across all instances                 | Shared across all instances     |
+| **Persistence**  | Stays in memory (persists for program lifetime) | Stays as long as the class exists in memory |
+| **Scope**        | Can be accessed via class and sometimes instance | Can only be accessed via class |
+
+## 🛠️ Key Takeaways
+
+- ✅ **JavaScript static properties are shared** but not instance-bound.
+- ✅ **They don’t persist beyond the program execution** like in C++.
+- ✅ **They are useful for counters, caches, and configurations** in full-stack applications.
+
+---
+
 🚀 **Next Lesson:** [Encapsulation & Private Properties](./10_Encapsulation.md)
 
