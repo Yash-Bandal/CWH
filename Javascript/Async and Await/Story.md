@@ -138,6 +138,12 @@ async function fetchData() {
 
 fetchData();
 ```
+
+OR
+```javascript
+const functionName = async() =>{
+  //required code
+}
 The function waits for the fetch() request to complete before proceeding to parse the JSON response.
 
 
