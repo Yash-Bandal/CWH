@@ -29,7 +29,7 @@ In **vanilla JavaScript**, you can achieve the same functionality as jQuery's `.
 
 ---
 
-## 1️⃣ `.text()` Alternative to element.textContent 
+### 1️⃣ `.text()` Alternative to element.textContent 
 **Usage:** Sets or returns the text content of selected elements (ignores HTML).  
 
 #### jQuery:
@@ -48,7 +48,7 @@ document.getElementById('myElement').textContent = 'New Text'; // Set text conte
 
 ---
 
-## 2️⃣ `.html()` Alternative to element.innerHTML
+### 2️⃣ `.html()` Alternative to element.innerHTML
 **Usage:** Sets or returns the content of selected elements (including HTML markup).  
 
 #### jQuery:
@@ -67,7 +67,7 @@ document.getElementById('myElement').innerHTML = '<b>Bold Text</b>'; // Set inne
 
 ---
 
-## 3️⃣ `.val()` Alternative to element.value 
+### 3️⃣ `.val()` Alternative to element.value 
 **Usage:** Sets or returns the value of form fields (`<input>`, `<textarea>`, `<select>`).  
 
 #### jQuery:
