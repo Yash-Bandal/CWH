@@ -5,7 +5,6 @@ jQuery makes it easy to manipulate the **Document Object Model (DOM)** by allowi
 
 ---
 
-## 📖 Topics Covered
 
 ### 🔹 1. Changing Content / Get Content - text(), html(), and val()
 jQuery provides methods to update text, HTML, and form values dynamically.
@@ -96,6 +95,15 @@ document.getElementById('myInput').value = 'New Value'; // Set input value
 | `.val()` | `$('selector').val()` | `element.value` |
 
 
+### Get Attributes - attr()
+The jQuery attr() method is used to get attribute values.
+
+```js
+  $("button").click(function(){
+    alert($("#w3s").attr("href"));
+  });
+```
+---
 
 ### 🔹 2. Modifying Attributes
 We can use `attr()` and `prop()` to modify element attributes dynamically.
