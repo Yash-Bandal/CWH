@@ -162,4 +162,4 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
 ---
 
-🔗 **Next Chapter: [Lesson 8 - jQuery Forms Handling](./8_jQuery_Forms_Handling.md)**
+🔗 **Next Chapter: [Lesson 8 - jQuery Forms Handling](./8_jQuery_Forms.md)**
