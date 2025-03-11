@@ -252,7 +252,7 @@ jQuery is not very strict on the syntax; you can format it like you want, includ
 - `stop()` → Stops an ongoing animation.
 - **Callback functions** → Execute logic after animations finish.
 
-📌 Next Chapter: [jQuery Traversing](./6_Effects_and_Animations.md)
+📌 Next Chapter: [jQuery Traversing](./6_jQuery_Traversing.md)
 
 
 
