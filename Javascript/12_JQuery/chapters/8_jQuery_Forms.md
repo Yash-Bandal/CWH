@@ -48,7 +48,7 @@ You can use `.val(value)` to set a new value for an input field.
 ### Example:
 ```javascript
 $('#setValueBtn').click(function() {
-    $('#nameInput').val('John Doe');
+    $('#nameInput').val('Yash Bandal');
 });
 ```
 
