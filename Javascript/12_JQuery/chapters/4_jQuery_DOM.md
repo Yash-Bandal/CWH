@@ -274,5 +274,5 @@ We can dynamically modify styles and classes using jQuery.
 
 ---
 
-📌 **Next Chapter:** [Effects and Animations →](./5_Effects_Animations.md)
+📌 **Next Chapter:** [Effects and Animations →](./5_jQuery_Effects.md)
 
