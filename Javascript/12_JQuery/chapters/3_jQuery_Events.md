@@ -153,5 +153,5 @@ Use `preventDefault()` to stop default browser actions.
 
 ---
 
-📌 **Next Chapter:** [Manipulating the DOM →](./4_Manipulating_DOM.md)
+📌 **Next Chapter:** [Manipulating the DOM →](./4_jQuery_DOM.md)
 
