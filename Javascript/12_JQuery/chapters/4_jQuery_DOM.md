@@ -127,9 +127,65 @@ We can insert or delete elements dynamically using jQuery.
   **Methods:**
   - `append()` – Adds content at the end of an element
   - `prepend()` – Adds content at the beginning
+  - `after()` - Inserts content after the selected elements
+  - `before()` - Inserts content before the selected element
   - `remove()` – Removes an element completely
+ 
+  #### Append() :
+  see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_append
 
-### 🔹 4. Modifying CSS and Classes
+  #### prepend()  :
+  see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_prepend
+
+  Add Several New Elements With append() and prepend()
+  usecase:
+  ```js
+  function appendText() {
+  var txt1 = "<p>Text.</p>";        // Create text with HTML
+  var txt2 = $("<p></p>").text("Text.");  // Create text with jQuery
+  var txt3 = document.createElement("p");
+  txt3.innerHTML = "Text.";         // Create text with DOM
+  $("body").append(txt1, txt2, txt3);   // Append new elements
+  }
+
+  <button onclick="appendText()">Append text</button>
+
+  ```
+  see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_append2
+  
+
+  #### after() :
+   
+  #### before() :
+  ```js
+  function afterText() {
+  var txt1 = "<b> I </b>";           // Create element with HTML
+  var txt2 = $("<i></i>").text("love ");  // Create with jQuery
+  var txt3 = document.createElement("b");   // Create with DOM
+  txt3.innerHTML = "jQuery!";
+  $("img").after(txt1, txt2, txt3);    // Insert new elements after img
+  }
+  <button onclick="afterText()">Insert after</button>
+  ```
+  see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_after2
+
+
+  #### remove() and empty()
+  - remove() - Removes the selected element (and its child elements)
+  - ```js
+    $("#div1").remove();
+    $("p").remove(".class1, .class2")  //filter
+    ```
+    see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_remove
+  - empty() - Removes only the child elements from the selected element
+  - ```js
+    $("#div1").empty();
+    ```
+    
+  - see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_empty
+   
+
+### 🔹 4. Modifying CSS and Classes on some action [vimp]
 We can dynamically modify styles and classes using jQuery.
 - **Example:**
   ```javascript
@@ -143,6 +199,71 @@ We can dynamically modify styles and classes using jQuery.
   - `addClass()` – Add a CSS class
   - `removeClass()` – Remove a CSS class
   - `toggleClass()` – Toggle a class on/off
+ 
+    #### 1. addClass()
+    ```js
+     $("button").click(function(){
+    $("h1, h2, p").addClass("blue");
+    $("div").addClass("important");
+    ```
+    see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_addclass
+    
+
+    #### 2. removeClass()
+    Keep some classes handy defined..that are not used ..then add when you want after an action
+    ```js
+    $("button").click(function(){
+    $("h1, h2, p").removeClass("blue");
+    });
+    ```
+    see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_removeclass
+
+    #### 3. toggleClass() 
+    Keep some classes handy defined..that are not used ..then add when you want after an action
+    ```js
+     $("button").click(function(){
+     $("h1, h2, p").toggleClass("blue");
+     });
+    ```
+    see    https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_dom_toggleclass
+
+
+    ### 4. css()
+    1. Single
+    ```
+    css("propertyname","value");
+    ```
+    ```js
+    $("p").css("background-color", "yellow");
+    ```
+    see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_css_setcolor
+
+    2. Multiple
+    ```
+    css({"propertyname":"value","propertyname":"value",...});
+    ```
+    ```js
+     $("p").css({
+     "background-color": "yellow",
+     "font-size": "200%"
+    });
+    ```
+    see https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_css_set_multiple
+
+
+    ### 🔹 5. jQuery Dimensions
+     - width()
+     - height()
+     - innerWidth()
+     - innerHeight()
+     - outerWidth()
+     - outerHeight()
+    
+       (![image](https://www.w3schools.com/jquery/img_jquerydim.gif)
+
+     
+
+    
 
 ---
 
