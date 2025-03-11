@@ -116,5 +116,5 @@ $('#myForm').submit(function(event) {
 - `.blur()` and `.keyup()` help with form validation.
 - `event.preventDefault()` prevents unwanted form submissions.
 
-🔗 **Next Lesson:** [Lesson 9: jQuery Plugins](./9_jquery_plugins.md)
+🔗 **Next Lesson:** [Lesson 9: jQuery Plugins](./9_jQuery_Plugins.md)
 
