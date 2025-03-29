@@ -11,3 +11,6 @@ display : flex and justify all props
 
 ### javascript
 designMode = on..temporarily edit websites
+
+### Hamburger nav bar
+You can toggle the visibility of a hamburger menu close button using CSS display: none; [default] and display: block;[on phone media query] based on a media query for mobile devices.
