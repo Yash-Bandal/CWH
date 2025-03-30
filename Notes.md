@@ -17,3 +17,6 @@ You can toggle the visibility of a hamburger menu close button using CSS display
 
 ### Tips
 - A good way is to make the web responsive on phone ..ie adding media queries side by side
+
+### why do we declare global var of local
+because local var changes every time new funct called...global is static
