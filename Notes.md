@@ -20,3 +20,9 @@ You can toggle the visibility of a hamburger menu close button using CSS display
 
 ### why do we declare global var of local
 because local var changes every time new funct called...global is static
+
+### If get element by tagname does not work..check if u have used [0]
+```js
+getElementsByTagName("input")[0]  //work
+getElementsByTagName("input")     //not work
+```
