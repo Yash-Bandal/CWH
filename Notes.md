@@ -26,3 +26,7 @@ because local var changes every time new funct called...global is static
 getElementsByTagName("input")[0]  //work
 getElementsByTagName("input")     //not work
 ```
+
+
+### Some common error faced 
+- see item.dataset / item.targer.dataset...see what we need while accesing contents from the folder
