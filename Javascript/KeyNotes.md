@@ -5,6 +5,24 @@ let n = 10;
 let arr = Array.from(Array(n+1).keys());
 console.log(arr);  
 ```
+
+## Toggling between images
+```js
+    document.querySelector('.volume img').addEventListener('click', (e) => {
+        console.log(e.target)
+   
+        //now directly access image
+        if(e.target.src.includes("volume.svg")){
+            e.target.src = e.target.src.replace("volume.svg","mute.svg");
+            currentSong.volume = 0;
+        }
+        else{
+            e.target.src = e.target.src.replace("mute.svg", "volume.svg");
+            currentSong.volume = 10/100;
+        }
+    });
+```
+
 //-------------------------------------   
 # `target` vs. `currentTarget` in JavaScript Events
 
